@@ -1,0 +1,488 @@
+{
+  "trends": {
+    "Climate Altering Land Cover Index (CALCI)": {
+      "slope": -1.1340182258064517,
+      "intercept": 2384.5846824193554,
+      "r2": 0.7254317262971304,
+      "p": 1.23586202831736e-09,
+      "min_year": 1992,
+      "max_year": 2022,
+      "n": 31
+    },
+    "Crop Yield": {
+      "slope": -7.794385457875456,
+      "intercept": 23395.470234191846,
+      "r2": 0.011523232322887975,
+      "p": 0.3985083289228875,
+      "min_year": 1961,
+      "max_year": 2024,
+      "n": 64
+    },
+    "Environmental Taxes": {
+      "slope": 0.11572194805194805,
+      "intercept": -231.51290606060604,
+      "r2": 0.7356935147260621,
+      "p": 6.704463389978864e-07,
+      "min_year": 2000,
+      "max_year": 2020,
+      "n": 21
+    },
+    "Fisheries management measures in place and multilateral and bilateral fisheries management arrangements": {
+      "slope": 0.33374077167584587,
+      "intercept": -644.5195685378444,
+      "r2": 0.6838829063675097,
+      "p": 2.688448671119751e-32,
+      "min_year": 1903,
+      "max_year": 2026,
+      "n": 124
+    },
+    "Greenhouse gaz emission per capita": {
+      "slope": -0.11811653679653679,
+      "intercept": 245.42321489177488,
+      "r2": 0.6658885547899704,
+      "p": 3.2010683173821674e-14,
+      "min_year": 1970,
+      "max_year": 2024,
+      "n": 55
+    },
+    "Livestock Yield": {
+      "slope": -14.256638921703294,
+      "intercept": 30355.978406181315,
+      "r2": 0.562989662728909,
+      "p": 9.524987887125704e-13,
+      "min_year": 1961,
+      "max_year": 2024,
+      "n": 64
+    },
+    "Meteorological monitoring network": {
+      "slope": 0.026371255442488275,
+      "intercept": -50.0800557170766,
+      "r2": 0.9547450260923349,
+      "p": 2.6889901551000795e-93,
+      "min_year": 1889,
+      "max_year": 2026,
+      "n": 138
+    },
+    "Power generation": {
+      "slope": 8.61860052173913,
+      "intercept": -16813.99041614493,
+      "r2": 0.9151333480459475,
+      "p": 2.8806943176180425e-13,
+      "min_year": 2000,
+      "max_year": 2023,
+      "n": 24
+    },
+    "Precipitation anomalies": {
+      "slope": 0.1106050416281221,
+      "intercept": -222.2591380203515,
+      "r2": 0.09872311319324052,
+      "p": 0.03148732767172298,
+      "min_year": 1979,
+      "max_year": 2025,
+      "n": 47
+    },
+    "Sea Level Anomalies": {
+      "slope": 0.004283870967741936,
+      "intercept": -8.557,
+      "r2": 0.7462556575708248,
+      "p": 3.887349459924839e-10,
+      "min_year": 1993,
+      "max_year": 2023,
+      "n": 31
+    },
+    "Sea Surface Temperature anomalies": {
+      "slope": 0.0036593808056350433,
+      "intercept": -7.225467356372442,
+      "r2": 0.36568436909403507,
+      "p": 6.249976421179922e-19,
+      "min_year": 1850,
+      "max_year": 2025,
+      "n": 176
+    },
+    "Surface Temperature anomalies": {
+      "slope": 0.0037293725511776373,
+      "intercept": -7.3681451133612175,
+      "r2": 0.3867726858910256,
+      "p": 3.210364015567496e-20,
+      "min_year": 1850,
+      "max_year": 2025,
+      "n": 176
+    },
+    "Tourism Arrivals": {
+      "slope": 3166.252608298108,
+      "intercept": -6101722.920531714,
+      "r2": 0.07147864448704028,
+      "p": 0.15320782882469727,
+      "min_year": 1995,
+      "max_year": 2024,
+      "n": 30
+    }
+  },
+  "correlations_vs_temp": {
+    "Climate Altering Land Cover Index (CALCI)": {
+      "r": -0.647,
+      "p": 8.38800763326134e-05,
+      "n": 31
+    },
+    "Crop Yield": {
+      "r": -0.206,
+      "p": 0.10278834523225536,
+      "n": 64
+    },
+    "Environmental Taxes": {
+      "r": 0.39,
+      "p": 0.08080039478199563,
+      "n": 21
+    },
+    "Fisheries management measures in place and multilateral and bilateral fisheries management arrangements": {
+      "r": 0.864,
+      "p": 7.429100398131249e-38,
+      "n": 123
+    },
+    "Greenhouse gaz emission per capita": {
+      "r": -0.808,
+      "p": 8.817522015455329e-14,
+      "n": 55
+    },
+    "Livestock Yield": {
+      "r": -0.599,
+      "p": 1.7394136884941472e-07,
+      "n": 64
+    },
+    "Meteorological monitoring network": {
+      "r": 0.818,
+      "p": 3.4624225064637696e-34,
+      "n": 137
+    },
+    "Power generation": {
+      "r": 0.609,
+      "p": 0.0015715228544694619,
+      "n": 24
+    },
+    "Precipitation anomalies": {
+      "r": 0.442,
+      "p": 0.001864448227827301,
+      "n": 47
+    },
+    "Sea Level Anomalies": {
+      "r": 0.682,
+      "p": 2.4105445974410153e-05,
+      "n": 31
+    },
+    "Sea Surface Temperature anomalies": {
+      "r": 0.998,
+      "p": 1.517836115274452e-203,
+      "n": 176
+    },
+    "Tourism Arrivals": {
+      "r": 0.314,
+      "p": 0.09127172684937239,
+      "n": 30
+    }
+  },
+  "country_temp_trends": [
+    {
+      "country": "French Polynesia",
+      "slope": 0.00438,
+      "r2": 0.279,
+      "p": 5.035191725792253e-14,
+      "n": 176
+    },
+    {
+      "country": "Vanuatu",
+      "slope": 0.00435,
+      "r2": 0.291,
+      "p": 1.1856691893325221e-14,
+      "n": 176
+    },
+    {
+      "country": "Marshall Islands",
+      "slope": 0.00431,
+      "r2": 0.362,
+      "p": 1.0927654750037737e-18,
+      "n": 176
+    },
+    {
+      "country": "Tokelau",
+      "slope": 0.00431,
+      "r2": 0.279,
+      "p": 5.090582129728888e-14,
+      "n": 176
+    },
+    {
+      "country": "Papua New Guinea",
+      "slope": 0.00425,
+      "r2": 0.298,
+      "p": 4.727451543884353e-15,
+      "n": 176
+    },
+    {
+      "country": "Solomon Islands",
+      "slope": 0.00415,
+      "r2": 0.248,
+      "p": 2.035963521835544e-12,
+      "n": 176
+    },
+    {
+      "country": "New Caledonia",
+      "slope": 0.00412,
+      "r2": 0.235,
+      "p": 9.061588344206388e-12,
+      "n": 176
+    },
+    {
+      "country": "American Samoa",
+      "slope": 0.00408,
+      "r2": 0.377,
+      "p": 1.3651027043538973e-19,
+      "n": 176
+    },
+    {
+      "country": "Samoa",
+      "slope": 0.00408,
+      "r2": 0.377,
+      "p": 1.3651027043538973e-19,
+      "n": 176
+    },
+    {
+      "country": "Wallis and Futuna",
+      "slope": 0.00401,
+      "r2": 0.385,
+      "p": 4.244195212725072e-20,
+      "n": 176
+    },
+    {
+      "country": "Fiji",
+      "slope": 0.00377,
+      "r2": 0.247,
+      "p": 2.166224471986022e-12,
+      "n": 176
+    },
+    {
+      "country": "Guam",
+      "slope": 0.00372,
+      "r2": 0.283,
+      "p": 2.866578292697096e-14,
+      "n": 176
+    },
+    {
+      "country": "Kiribati",
+      "slope": 0.00361,
+      "r2": 0.125,
+      "p": 1.5172884244635326e-06,
+      "n": 176
+    },
+    {
+      "country": "Cook Islands",
+      "slope": 0.0036,
+      "r2": 0.318,
+      "p": 3.778286412475169e-16,
+      "n": 176
+    },
+    {
+      "country": "Northern Mariana Islands",
+      "slope": 0.00358,
+      "r2": 0.256,
+      "p": 7.988869245697159e-13,
+      "n": 176
+    },
+    {
+      "country": "Micronesia, Federated State of",
+      "slope": 0.00355,
+      "r2": 0.265,
+      "p": 2.558108215213025e-13,
+      "n": 176
+    },
+    {
+      "country": "Tuvalu",
+      "slope": 0.00355,
+      "r2": 0.222,
+      "p": 4.2368572775736506e-11,
+      "n": 176
+    },
+    {
+      "country": "Niue",
+      "slope": 0.00333,
+      "r2": 0.228,
+      "p": 2.115623735056179e-11,
+      "n": 176
+    },
+    {
+      "country": "Tonga",
+      "slope": 0.00324,
+      "r2": 0.188,
+      "p": 1.8209750921106437e-09,
+      "n": 176
+    },
+    {
+      "country": "Palau",
+      "slope": 0.003,
+      "r2": 0.174,
+      "p": 8.054096861674762e-09,
+      "n": 176
+    },
+    {
+      "country": "Nauru",
+      "slope": 0.00279,
+      "r2": 0.095,
+      "p": 3.1134073926802475e-05,
+      "n": 176
+    },
+    {
+      "country": "Pitcairn",
+      "slope": 0.00228,
+      "r2": 0.155,
+      "p": 6.500997121752882e-08,
+      "n": 176
+    }
+  ],
+  "country_sea_level_trends": [
+    {
+      "country": "Papua New Guinea",
+      "slope": 0.0054,
+      "r2": 0.534,
+      "p": 3.003952125421938e-06,
+      "n": 31
+    },
+    {
+      "country": "Solomon Islands",
+      "slope": 0.00512,
+      "r2": 0.415,
+      "p": 9.237013631401552e-05,
+      "n": 31
+    },
+    {
+      "country": "Niue",
+      "slope": 0.00492,
+      "r2": 0.62,
+      "p": 1.467661197426103e-07,
+      "n": 31
+    },
+    {
+      "country": "Palau",
+      "slope": 0.00484,
+      "r2": 0.249,
+      "p": 0.004303380885248221,
+      "n": 31
+    },
+    {
+      "country": "Cook Islands",
+      "slope": 0.00464,
+      "r2": 0.57,
+      "p": 9.197712301012677e-07,
+      "n": 31
+    },
+    {
+      "country": "Micronesia, Federated State of",
+      "slope": 0.00464,
+      "r2": 0.339,
+      "p": 0.0005931329126879919,
+      "n": 31
+    },
+    {
+      "country": "Vanuatu",
+      "slope": 0.0046,
+      "r2": 0.449,
+      "p": 3.7550830004346385e-05,
+      "n": 31
+    },
+    {
+      "country": "Samoa",
+      "slope": 0.00452,
+      "r2": 0.323,
+      "p": 0.0008586378921043486,
+      "n": 31
+    },
+    {
+      "country": "Nauru",
+      "slope": 0.00448,
+      "r2": 0.51,
+      "p": 6.4384559154009444e-06,
+      "n": 31
+    },
+    {
+      "country": "Tuvalu",
+      "slope": 0.0044,
+      "r2": 0.349,
+      "p": 0.0004711748665373874,
+      "n": 31
+    },
+    {
+      "country": "New Caledonia",
+      "slope": 0.00431,
+      "r2": 0.596,
+      "p": 3.6144285471614313e-07,
+      "n": 31
+    },
+    {
+      "country": "Fiji",
+      "slope": 0.00415,
+      "r2": 0.442,
+      "p": 4.505467017000517e-05,
+      "n": 31
+    },
+    {
+      "country": "French Polynesia",
+      "slope": 0.00415,
+      "r2": 0.603,
+      "p": 2.844390119848635e-07,
+      "n": 31
+    },
+    {
+      "country": "Wallis and Futuna",
+      "slope": 0.00415,
+      "r2": 0.273,
+      "p": 0.0025743892894945497,
+      "n": 31
+    },
+    {
+      "country": "Kiribati",
+      "slope": 0.00391,
+      "r2": 0.397,
+      "p": 0.00014428929153499133,
+      "n": 31
+    },
+    {
+      "country": "Tonga",
+      "slope": 0.00387,
+      "r2": 0.484,
+      "p": 1.3921297620157214e-05,
+      "n": 31
+    },
+    {
+      "country": "American Samoa",
+      "slope": 0.00383,
+      "r2": 0.272,
+      "p": 0.002594972943843222,
+      "n": 31
+    },
+    {
+      "country": "Marshall Islands",
+      "slope": 0.00383,
+      "r2": 0.389,
+      "p": 0.00017769216707158716,
+      "n": 31
+    },
+    {
+      "country": "Guam",
+      "slope": 0.00355,
+      "r2": 0.177,
+      "p": 0.01856731920865007,
+      "n": 31
+    },
+    {
+      "country": "Northern Mariana Islands",
+      "slope": 0.00343,
+      "r2": 0.411,
+      "p": 0.0001032594988644934,
+      "n": 31
+    },
+    {
+      "country": "Tokelau",
+      "slope": 0.00323,
+      "r2": 0.265,
+      "p": 0.0030519434517952684,
+      "n": 31
+    }
+  ]
+}
