@@ -200,11 +200,13 @@ The results are saved as:
 
 ### Candidate exclusions
 
-`Power generation` and `Environmental Taxes` are not included as candidate predictors in the forward-selection model.
+`Power generation` and `Environmental Taxes` are deliberately excluded
+from the candidate set to retain a longer common overlapping data window
+for the seven candidate indicators. They could be included in an
+alternative model using a shorter, more recent common period.
 
-They are excluded to retain a longer common overlapping data window for the seven selected candidates.
-
-This is a modelling-scope decision and should not be interpreted as a statement that these indicators are unimportant to climate policy or climate change.
+This is a modelling-scope decision and does not imply that these indicators
+are unimportant to climate policy or climate change.
 
 ### Model result
 
