@@ -10,9 +10,13 @@ Output: regional_series.json
 """
 import pandas as pd
 import json
+from pathlib import Path
 
-SRC = "Data_CLIMATE_CHANGE.csv"
-OUT = "regional_series.json"
+BASE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BASE_DIR.parent
+
+SRC = ROOT_DIR / "Data_CLIMATE_CHANGE.csv"
+OUT = BASE_DIR / "regional_series.json"
 
 COLS = [
     "Pacific Island Countries and territories",
