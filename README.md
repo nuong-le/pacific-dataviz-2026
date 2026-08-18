@@ -1,183 +1,112 @@
 # Smallest Footprint, Biggest Impact
 
-## Pacific Climate Change — Data Visualisation Project
+## Pacific Climate Change — Pacific Dataviz Challenge 2026
 
-The Pacific contributes relatively little to global greenhouse gas emissions, yet Pacific communities face some of the world's most immediate climate risks.
+The Pacific contributes relatively little to global greenhouse gas emissions, yet Pacific communities are among those facing significant and immediate climate risks.
 
-**Smallest Footprint, Biggest Impact** explores how climate-related indicators have changed across the Pacific, how these changes relate to regional temperature anomalies, and what historical trends suggest about possible future trajectories.
+**Smallest Footprint, Biggest Impact** explores how climate-related indicators are changing across the Pacific, how these indicators relate statistically to regional surface temperature anomalies, and what historical trends suggest about possible future trajectories.
 
-The project combines data analysis, statistical modelling and interactive visual storytelling to turn a complex set of climate indicators into an accessible evidence-based story.
+The project combines data preparation, statistical analysis, modelling and interactive visual storytelling to turn a complex set of climate indicators into an accessible evidence-based story.
 
 ---
 
 ## 🌏 Explore the interactive visualisation
 
-**[▶ View the interactive dashboard](YOUR-GITHUB-PAGES-URL)**
+**[▶ View the interactive visualisation](YOUR-GITHUB-PAGES-URL)**
 
-The interactive visualisation presents the main story through long-term climate trends, regional patterns, statistical relationships and modelled projections.
-
----
-
-## The story
-
-The analysis follows a simple journey:
-
-**Observed change → Regional patterns → Statistical relationships → Modelled trajectories → Why this matters**
-
-Rather than treating every statistically significant indicator as evidence of climate change, the analysis applies statistical checks and analytical judgement to identify patterns that are most relevant to the climate story.
+The interactive story brings together long-term temperature and sea-level trends, environmental indicators, statistical relationships, modelled trajectories and potential areas for climate action.
 
 ---
 
-## Key findings
+## The analytical story
 
-The analysis highlights several important patterns across the available Pacific climate indicators:
+The project follows four stages:
 
-### 1. Long-term warming
+**What is changing? → What moves with temperature? → Which indicators matter most statistically? → What could future trajectories look like?**
 
-Regional temperature anomaly shows a persistent long-term change over the observed period, providing the wider climate context for the indicators explored throughout the story.
+The analysis begins by constructing regional yearly series from the available Pacific reporting data. It then examines long-term trends and statistical associations with regional surface temperature anomalies.
 
-### 2. Climate indicators do not change in isolation
+A forward-selection model is used to identify which candidate indicators contribute most to explaining variation in the regional temperature series within the available overlapping data.
 
-Several environmental indicators show statistical associations with regional temperature anomaly. These relationships help identify patterns in the data, but they are interpreted as associations rather than proof of causation.
+Finally, linear and quadratic trend models are compared for surface temperature and sea-level anomalies to illustrate possible trajectories to 2030 and 2050.
 
-### 3. Historical trends point towards continued change
+The statistical results are then translated into an interactive visual narrative.
 
-Trend and model comparisons indicate continued changes under the fitted historical relationships. However, projections become increasingly uncertain as they extend further beyond the observed data.
+---
 
-### 4. Statistical significance is not enough
+# Key findings
 
-Some indicators showed strong statistical trends but were deliberately excluded from the final climate narrative because their changes may primarily reflect growth in monitoring or reporting infrastructure rather than a direct climate signal.
+The analysis highlights several patterns that shape the story.
 
-This distinction is important when turning statistical results into a responsible data story.
+### 1. Surface temperature shows a persistent long-term trend
+
+Regional Surface Temperature anomalies are analysed as the central climate-change reference variable. A linear OLS trend is fitted against year, providing the long-term trend, R² and p-value used in the analysis. :contentReference[oaicite:9]{index=9}
+
+### 2. Climate indicators show different relationships with temperature
+
+Pearson correlations are calculated between each regional indicator series and regional Surface Temperature anomalies using their overlapping years.
+
+These results identify statistical associations in the available data. They are **not interpreted as proof of causation**. :contentReference[oaicite:10]{index=10}
+
+### 3. The strongest statistical contributors are identified through forward selection
+
+A forward-selection procedure starts with an empty model and progressively adds the candidate indicator that produces the greatest improvement in adjusted R² for regional Surface Temperature anomalies.
+
+The procedure stops when the best remaining addition improves adjusted R² by less than 0.005. :contentReference[oaicite:11]{index=11}
+
+### 4. Historical trends can be extended, but projections are uncertain
+
+For Surface Temperature anomalies and Sea Level Anomalies, linear and quadratic polynomial models are fitted and compared using AIC.
+
+The models are then extrapolated to 2030 and 2050 under both functional forms. These are **trend-based statistical projections**, not physical climate-model forecasts or emissions scenarios. :contentReference[oaicite:12]{index=12}
 
 ---
 
 # Data
 
-The primary dataset used in this project is the **SPC Climate Change Indicators** dataset.
+## Primary dataset
 
-### Source
+The core analysis uses the **SPC Climate Change Indicators** dataset supplied as:
 
-**Pacific Community (SPC)**
+`Data_CLIMATE_CHANGE.csv`
 
-The supplied `Data_CLIMATE_CHANGE.csv` contains the source data used for the analysis.
+The dataset contains climate and environmental indicators reported for Pacific Island countries and territories.
 
-The original source documentation should be consulted for indicator definitions, data coverage and reporting methodology.
+The analysis pipeline identifies **13 indicators** in the supplied dataset and constructs a regional yearly series for each indicator. :contentReference[oaicite:13]{index=13}
 
 ### Regional aggregation
 
-For each indicator, values are aggregated across the reporting Pacific territories for each year to create a regional mean series.
+For each indicator, observations are grouped by year and averaged across all territories reporting that indicator in that year.
 
-The regional series represents the average reported territorial signal rather than a population-weighted estimate.
+This produces one regional mean value per year.
 
-Because the number of reporting territories can vary between indicators and years, the resulting regional series should be interpreted with this limitation in mind.
+The regional mean is therefore an **unweighted mean across available reporting territories**, rather than a population-weighted estimate. :contentReference[oaicite:14]{index=14}
+
+Because reporting coverage can vary across indicators and years, differences in coverage should be considered when interpreting the regional series.
 
 ---
 
 # Methodology
 
-The analytical workflow combines descriptive analysis, statistical association, variable selection and trend-based modelling.
-
 ## 1. Data preparation
 
-The source dataset is cleaned and standardised before analysis.
+`01_clean_data.py`
 
-The process includes:
+The raw SPC CSV is loaded and standardised.
 
-- standardising indicator and territory information;
-- preparing yearly observations;
-- handling available observations across reporting territories;
-- constructing regional indicator series.
+The script:
 
-## 2. Trend analysis
+- selects the required country, indicator, year and observation-value fields;
+- removes missing observations;
+- standardises country and indicator text;
+- identifies the available indicators;
+- calculates a yearly regional mean for each indicator.
 
-Linear trends are estimated against year for the available indicators.
+The output is:
 
-These trends are used to understand how indicators have changed over time and to provide the historical context for the visual story.
+`regional_series.json`
 
-## 3. Correlation analysis
+Each indicator is stored as a series of:
 
-Pearson correlation is used to examine statistical associations between indicators and regional temperature anomaly.
-
-Correlation is treated as an indication of association, **not evidence of causation**.
-
-## 4. Forward selection
-
-Stepwise forward selection is used to identify indicators that provide the strongest contribution to a statistical model of regional temperature anomaly.
-
-The procedure:
-
-1. starts with no predictors;
-2. evaluates the remaining candidate indicators;
-3. adds the indicator producing the greatest improvement in adjusted R²;
-4. continues until the next addition improves adjusted R² by less than 0.005.
-
-The analysis uses the 1995–2022 period where seven candidate indicators overlap, resulting in 28 annual observations.
-
-## 5. Model comparison
-
-For temperature and sea-level indicators, both linear and quadratic polynomial models are fitted.
-
-The models are compared using Akaike Information Criterion (AIC), with the lower AIC indicating the better in-sample fit.
-
-The resulting 2030 and 2050 values are presented as **trend-based modelled projections**, not as precise climate forecasts.
-
-Uncertainty increases as projections extend further beyond the observed period.
-
----
-
-# Analytical decisions and exclusions
-
-Not every statistically significant indicator was included in the final climate narrative.
-
-Two indicators were deliberately excluded:
-
-- **Meteorological Monitoring Network**
-- **Fisheries Management Measures**
-
-Although these indicators showed statistically strong trends, their changes are more plausibly influenced by growth in monitoring, reporting or administrative infrastructure over time.
-
-Including them without this context could incorrectly present changes in reporting capacity as evidence of climate change.
-
-This exclusion was therefore an analytical judgement rather than a statistical failure.
-
----
-
-# Limitations
-
-Several limitations should be considered when interpreting the results:
-
-- Regional means depend on the territories reporting data in each year.
-- Missing observations may affect comparability across indicators and years.
-- Territories contribute to the regional mean based on the aggregation approach rather than population size.
-- Correlation and regression results indicate statistical association, not causation.
-- The forward-selection analysis is based on a relatively small overlapping sample.
-- Modelled projections become increasingly uncertain further beyond the observed period.
-- The analysis does not attempt to reproduce physical climate models or emissions scenarios.
-- Historical statistical relationships should not be interpreted as guaranteed future outcomes.
-
-These limitations are important when translating statistical patterns into a climate narrative.
-
----
-
-# Reproducible analysis
-
-The repository contains the source dataset, analysis scripts and supporting outputs used to develop the visual story.
-
-The core analysis is implemented in Python using:
-
-- pandas
-- NumPy
-- SciPy
-- Matplotlib
-
-The analysis can be reproduced using the scripts in the `Code` folder.
-
-### Setup
-
-Python 3.9+ is recommended.
-
-Install the required packages:
-
-```bash
-pip install pandas numpy scipy matplotlib
+```text
+[year, value]
