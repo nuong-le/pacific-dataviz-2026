@@ -206,6 +206,16 @@ They are excluded to retain a longer common overlapping data window for the seve
 
 This is a modelling-scope decision and should not be interpreted as a statement that these indicators are unimportant to climate policy or climate change.
 
+### Model result
+
+The forward-selection procedure identified four indicators in the final
+model over the common 1995–2022 period (n = 28).
+
+The final model achieved an adjusted R² of 0.64.
+
+This indicates statistical explanatory power within the observed sample;
+it should not be interpreted as evidence of causal relationships.
+
 ---
 
 # 4. Trend Model Comparison and Projections
