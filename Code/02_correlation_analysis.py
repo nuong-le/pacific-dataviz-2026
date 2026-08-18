@@ -17,6 +17,10 @@ import json
 import numpy as np
 from scipy import stats
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BASE_DIR.parent
 
 TARGET_INDICATOR = "Surface Temperature anomalies"
 
@@ -43,7 +47,7 @@ def correlation_with_target(series: list, target: dict) -> dict:
     return {"r": round(float(r), 3), "p": float(p), "n": len(merged)}
 
 
-def country_level_trends(csv_path: str, indicator: str) -> list:
+def country_level_trends(csv_path: st, indicator: str) -> list:
     """Run the same linear trend per territory (not the regional mean)."""
     df = pd.read_csv(csv_path)
     df = df[["Pacific Island Countries and territories", "Climate Change Indicators",
@@ -63,8 +67,8 @@ def country_level_trends(csv_path: str, indicator: str) -> list:
 
 
 def main():
-    with open("regional_series.json") as f:
-        series = json.load(f)
+  with open(BASE_DIR / "regional_series.json") as f:
+    series = json.load(f)
 
     target = series[TARGET_INDICATOR]
 
@@ -87,12 +91,12 @@ def main():
             print(f"{indicator:55s} r={c['r']:+.3f}  p={c['p']:.2e}  n={c['n']}")
 
     print("\n=== Country-level trends: Surface Temperature anomalies ===")
-    country_temp = country_level_trends("Data_CLIMATE_CHANGE.csv", "Surface Temperature anomalies")
+    country_temp = country_level_trends( ROOT_DIR /"Data_CLIMATE_CHANGE.csv", "Surface Temperature anomalies")
     n_sig = sum(1 for c in country_temp if c["p"] < 0.05)
     print(f"{n_sig}/{len(country_temp)} territories individually significant (p<0.05)")
 
     print("\n=== Country-level trends: Sea Level Anomalies ===")
-    country_sl = country_level_trends("Data_CLIMATE_CHANGE.csv", "Sea Level Anomalies")
+    country_sl = country_level_trends(ROOT_DIR /"Data_CLIMATE_CHANGE.csv", "Sea Level Anomalies")
     n_sig_sl = sum(1 for c in country_sl if c["p"] < 0.05)
     print(f"{n_sig_sl}/{len(country_sl)} territories individually significant (p<0.05)")
 
@@ -102,7 +106,7 @@ def main():
         "country_temp_trends": country_temp,
         "country_sea_level_trends": country_sl,
     }
-    with open("trend_stats.json", "w") as f:
+    with open(BASE_DIR /"trend_stats.json", "w") as f:
         json.dump(out, f, indent=2, default=float)
     print("\nWrote trend_stats.json")
 
