@@ -281,7 +281,7 @@ The generated charts include supporting visualisations of:
 
 The charts are saved to:
 
-`output_charts/`
+`OutputChart/`
 
 This step supports the report/PDF visualisation and is separate from the main dashboard data-generation step.
 
