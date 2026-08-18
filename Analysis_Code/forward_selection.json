@@ -1,0 +1,53 @@
+{
+  "target": "Surface Temperature anomalies",
+  "candidates": [
+    "Sea Level Anomalies",
+    "Greenhouse gaz emission per capita",
+    "Livestock Yield",
+    "Climate Altering Land Cover Index (CALCI)",
+    "Crop Yield",
+    "Precipitation anomalies",
+    "Tourism Arrivals"
+  ],
+  "common_years": [
+    1995,
+    2022
+  ],
+  "n_obs": 28,
+  "selected_features": [
+    "Sea Level Anomalies",
+    "Greenhouse gaz emission per capita",
+    "Precipitation anomalies",
+    "Crop Yield"
+  ],
+  "history": [
+    {
+      "step": 1,
+      "feature": "Sea Level Anomalies",
+      "r2": 0.367,
+      "adj_r2": 0.3426,
+      "model_p": 0.0006349469131499141
+    },
+    {
+      "step": 2,
+      "feature": "Greenhouse gaz emission per capita",
+      "r2": 0.5368,
+      "adj_r2": 0.4997,
+      "model_p": 6.64523832140107e-05
+    },
+    {
+      "step": 3,
+      "feature": "Precipitation anomalies",
+      "r2": 0.649,
+      "adj_r2": 0.6052,
+      "model_p": 1.1564082675219467e-05
+    },
+    {
+      "step": 4,
+      "feature": "Crop Yield",
+      "r2": 0.6941,
+      "adj_r2": 0.6409,
+      "model_p": 1.0894474489320238e-05
+    }
+  ]
+}
