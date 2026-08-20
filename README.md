@@ -33,7 +33,6 @@ The interactive story brings together:
 | **Interactive visualisation** | [Open the live report](https://nuong-le.github.io/pacific-dataviz-2026/) |
 | **Source repository** | [GitHub repository](https://github.com/nuong-le/pacific-dataviz-2026) |
 | **Analysis code** | [`Analysis_Code/`](https://github.com/nuong-le/pacific-dataviz-2026/tree/main/Analysis_Code) |
-| **HTML report** | [`Mai_Nuong_Le_Pacific_Dataviz_2026_final.html`](https://github.com/nuong-le/pacific-dataviz-2026/blob/main/Mai_Nuong_Le_Pacific_Dataviz_2026_final.html) |
 
 ---
 
