@@ -12,7 +12,7 @@ The project combines data preparation, statistical analysis, modelling and inter
 
 ## 🌏 Explore the Interactive Visualisation
 
-**[▶ View the Interactive Visualisation](YOUR-GITHUB-PAGES-URL)**
+**[▶ View the Interactive Visualisation](https://nuong-le.github.io/pacific-dataviz-2026/)**
 
 The interactive story brings together long-term temperature and sea-level trends, environmental indicators, statistical relationships, modelled trajectories and contextual evidence about climate risk in the Pacific.
 
